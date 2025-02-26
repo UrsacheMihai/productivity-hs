@@ -1,7 +1,8 @@
 {
-  "name": "student-productivity-app",
+  "name": "productivity-hs",
   "private": true,
-  "version": "0.0.0",
+  "homepage": "https://ursachemihai.github.io/productivity-hs/",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
