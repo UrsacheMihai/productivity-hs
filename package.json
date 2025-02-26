@@ -1,7 +1,7 @@
 {
   "name": "productivity-hs",
   "private": true,
-  "homepage": "https://ursachemihai.github.io/productivity-hs/",
+  "homepage": "https://ursachemihai.github.io/productivity-hs/#/",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
