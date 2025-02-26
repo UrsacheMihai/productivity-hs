@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom'; // No need to import Router here
 import { Toaster } from 'react-hot-toast';
 import Navigation from './components/Navigation';
 import HomePage from './pages/HomePage';
@@ -44,26 +44,24 @@ function App() {
 
     return (
         <div className={`min-h-screen bg-gray-100 dark:bg-gray-900 ${theme}`}>
-            <Router>
-                {user ? (
-                    <>
-                        <div className="pb-16 md:pt-16 md:pb-0">
-                            <Routes>
-                                <Route path="/" element={<HomePage />} />
-                                <Route path="/schedule" element={<SchedulePage />} />
-                                <Route path="/tasks" element={<TasksPage />} />
-                            </Routes>
-                        </div>
-                        <Navigation />
-                    </>
-                ) : (
-                    <Routes>
-                        <Route path="/" element={<LoginPage />} />
-                        <Route path="/register" element={<RegisterPage />} />
-                        <Route path="*" element={<LoginPage />} />
-                    </Routes>
-                )}
-            </Router>
+            {user ? (
+                <>
+                    <div className="pb-16 md:pt-16 md:pb-0">
+                        <Routes>
+                            <Route path="/" element={<HomePage />} />
+                            <Route path="/schedule" element={<SchedulePage />} />
+                            <Route path="/tasks" element={<TasksPage />} />
+                        </Routes>
+                    </div>
+                    <Navigation />
+                </>
+            ) : (
+                <Routes>
+                    <Route path="/" element={<LoginPage />} />
+                    <Route path="/register" element={<RegisterPage />} />
+                    <Route path="*" element={<LoginPage />} />
+                </Routes>
+            )}
             <Toaster position="top-right" />
             <footer className="text-center py-4 mt-8">
                 <p className="text-sm text-gray-600">Made by Ursache Mihai</p>

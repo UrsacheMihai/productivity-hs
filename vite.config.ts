@@ -10,8 +10,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
       manifest: {
-        name: 'StudyBuddy',
-        short_name: 'StudyBuddy',
+        name: 'Productivity-HS',
+        short_name: 'Productivity-HS',
         description: 'Student productivity app with schedule and task management',
         theme_color: '#4f46e5',
         icons: [
